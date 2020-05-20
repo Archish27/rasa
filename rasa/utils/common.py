@@ -345,7 +345,7 @@ def raise_warning(
         elif category == UserWarning:
             kwargs["stacklevel"] = 2
         elif category == FutureWarning:
-            kwargs["stacklevel"] = 3
+            kwargs["stacklevel"] = 2
 
     warnings.formatwarning = formatwarning
     warnings.warn(message, category=category, **kwargs)

@@ -20,6 +20,14 @@ def test_raise_warning():
     assert record[0].message.args[0] == "My warning."
 
 
+def test_raise_future_warning():
+    with pytest.warns(FutureWarning) as record:
+        raise_warning("My future warning.")
+
+    assert len(record) == 1
+    assert record[0].message.args[0] == "My future warning."
+
+
 def test_raise_deprecation():
     with pytest.warns(DeprecationWarning) as record:
         raise_warning("My warning.", DeprecationWarning)
