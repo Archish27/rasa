@@ -10,7 +10,7 @@
 *build/
 *dat
 .env
-venv
+.venv
 .pytest_cache/
 .ipynb_checkpoints
 .ruby-version
@@ -27,6 +27,7 @@ build/
 jnk/
 logs/
 tmp/
+venv/
 profile.*
 *.sqlite
 lastmile_ai/learn/plots/
